@@ -4,10 +4,7 @@ import com.zereight.springboot.study.springboot.service.PostsService;
 import com.zereight.springboot.study.springboot.web.dto.PostsSaveRequestDto;
 import com.zereight.springboot.study.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
@@ -15,7 +12,7 @@ public class PostsApiController {
 
     private final PostsService postsService;
 
-    @PutMapping("/api/v1/posts")
+    @PostMapping("/api/v1/posts")
     public Long save(
             @RequestBody PostsSaveRequestDto requestDto
             ){
